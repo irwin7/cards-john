@@ -1,0 +1,90 @@
+*,
+*::after,
+*::before{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body{
+  background-color: #fff;
+  perspective: 1000px;
+  height: 100vh;
+  font-family: 'Roboto', sans-serif;
+}
+
+.cards{
+  position: relative;
+  transform: rotateX(0deg) rotateY(0deg);
+  transform-style: preserve-3d;
+  transition: all 1s ease 0.2s;
+  width: 375px;
+  height: 500px;
+  margin-top: 50px;
+}
+
+.card{
+  width: 375px;
+  height: 500px;
+  position: absolute;
+}
+
+.front{
+  background-image: url('../img/john-doe.jpg');
+  background-size: cover;
+  transform: translate3d(0,0,1px);
+}
+
+.back{
+  background: rgb(1,0,1);
+  background: linear-gradient(90deg, rgba(1,0,1,1) 50%, rgba(25,24,26,1) 50%);
+  color: #fff;
+  transform: translate3d(0,0,-1px) rotateX(180deg);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.john-list{
+  list-style: none;
+  width: 280px;
+  margin: 0 auto;
+}
+
+.john-list li{
+  width: 49px;
+  height: 47px;
+  background-color: #242224;
+  padding-top: 12px;
+  padding-left: 2px;
+  border-radius: 50%;
+  transition: all 0.4s ease;
+}
+
+.john-list li:hover{
+  background-color: #4A232D;
+}
+
+.bx{
+  font-size: 25px;
+}
+
+h2{
+  font-size: 30px;
+}
+
+p{
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 68px;
+  color: #9E9D9E;
+}
+
+.john:hover .cards{
+  transform: rotateX(-180deg);
+}
+
+a{
+  color: #fff;
+}
